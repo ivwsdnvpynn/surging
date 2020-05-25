@@ -23,6 +23,8 @@ namespace Surging.Core.CPlatform.Configurations
 
         public bool Libuv { get; set; } = false;
 
+        public DockerDeployMode DockerDeployMode { get; set; } = DockerDeployMode.Standard;
+
         public int SoBacklog { get; set; } = 8192;
 
         public bool EnableRouteWatch { get; set; }
@@ -37,6 +39,10 @@ namespace Surging.Core.CPlatform.Configurations
         public string WebRootPath { get; set; } = AppContext.BaseDirectory;
 
         public int Port { get; set; }
+
+        public bool DisableServiceRegistration { get; set; }
+
+        public bool DisableDiagnostic { get; set; }
 
         public bool ReloadOnChange { get; set; } = false;
 
